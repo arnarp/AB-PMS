@@ -1,0 +1,28 @@
+{
+  "name": "abPms",
+  "version": "0.0.0",
+  "homepage": "https://github.com/arnarp/AB-PMS",
+  "authors": [
+    "Arnar Birgisson <arnarp@gmail.com>"
+  ],
+  "description": "AB Property Management System",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "toastr": "~2.1.0",
+    "angular": "~1.3.9",
+    "angular-resource": "~1.3.9",
+    "angular-route": "~1.3.9",
+    "angular-animate": "~1.3.9",
+    "bootstrap": "~3.3.1"
+  }
+}

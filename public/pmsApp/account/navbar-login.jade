@@ -1,0 +1,17 @@
+.navbar-right(ng-controller="NavbarLogin as vm")
+   form.navbar-form(ng-hide="vm.identity.isAuthenticated()")
+      .form-group
+         input.form-control(placeholder="Email", ng-model="vm.username")
+      .form-group
+         input.form-control(type="password", placeholder="Password", ng-model="vm.password")
+      button.btn.btn-primary(ng-click="vm.signin(vm.username, vm.password)") Sign in
+   ul.nav.navbar-nav.navbar-right(ng-show="vm.identity.isAuthenticated()")
+      li.dropdown
+         a.dropdown-toggle(href="", data-toggle="dropdown")
+            | {{vm.identity.currentUser.firstName + " " + vm.identity.currentUser.lastName}}
+            b.caret
+         ul.dropdown-menu
+            li(ng-show="vm.identity.currentUser.isAdmin()")
+               a(href="/admin/users") User Admin
+            li
+               a(href="", ng-click="vm.signout()") Sign Out
